@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/font-awesome.css">
+  <link rel="stylesheet" href="/assets/css/templatemo-lava.css">
+  <link rel="stylesheet" href="/assets/css/owl-carousel.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .dashboard-header {
+      background-color: #0b93fb;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .portfolio-metrics {
+      margin-top: 30px;
+    }
+
+    .metric-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .chart-container {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard-header">
+    <h1>Welcome, Alberto</h1>
+  </div>
+
+  <div class="container portfolio-metrics">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="metric-card">
+          <h5>Total Portfolio Value</h5>
+          <h2>$150,000</h2>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="metric-card">
+          <h5>Annual Return</h5>
+          <h2>8.5%</h2>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="metric-card">
+          <h5>Risk Level</h5>
+          <h2>Moderate</h2>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="metric-card">
+          <h5>Diversification Score</h5>
+          <h2>72%</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="chart-container">
+          <h5>Portfolio Allocation</h5>
+          <canvas id="allocationChart"></canvas>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="chart-container">
+          <h5>Portfolio Performance Over Time</h5>
+          <canvas id="performanceChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Portfolio Allocation Pie Chart
+    const allocationCtx = document.getElementById('allocationChart').getContext('2d');
+    new Chart(allocationCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Stocks', 'Bonds', 'Real Estate', 'Commodities', 'Cash'],
+        datasets: [{
+          data: [50, 20, 15, 10, 5],
+          backgroundColor: ['#007bff', '#28a745', '#ffc107', '#17a2b8', '#dc3545']
+        }]
+      }
+    });
+
+    // Portfolio Performance Line Chart
+    const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+    new Chart(performanceCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Portfolio Value',
+          data: [100000, 102000, 104500, 103000, 107000, 110000, 115000, 117000, 120000, 125000, 130000, 150000],
+          borderColor: '#007bff',
+          fill: false
+        }]
+      }
+    });
+  </script>
+</body>
+
+</html>

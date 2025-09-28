@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TemplateMo">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <title>QUANTIVUS</title>
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-lava.css">
+  <link rel="stylesheet" href="assets/css/owl-carousel.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <!-- Custom CSS for Overlay Effect and Full-Screen Sections -->
+  <style>
+    /* Make the Services and Promotion sections fill the entire viewport */
+    #servicesCenter, 
+    #promotion {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    /* Overlay container covers the entire viewport */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+    }
+    /* Centered overlay content */
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    /* Close icon inside the overlay */
+    .close-overlay {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+    /* Media query for mobile devices */
+    @media only screen and (max-width: 768px) {
+      .welcome-area .header-text .left-text h1 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+      .welcome-area .header-text .left-text p {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+      .welcome-area .header-text .left-text {
+        padding: 10px;
+      }
+    }
+
+    body {
+      background-image: url('assets/images/Immagine1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* Remove background image on screens smaller than 768px */
+    @media only screen and (max-width: 768px) {
+      body {
+        background-image: none;        /* Removes the background image */
+        background-color: #ffffff;     /* Optional: set a solid background color */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="#welcome" class="logo" style="color: #0b93fb;">QUANTIVUS</a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#welcome" class="menu-item">Home</a></li>
+              <!-- Services: scroll so that the top of the container aligns below the header -->
+              <li class="scroll-to-section"><a href="#servicesCenter" class="menu-item">Services</a></li>
+              <!-- Products: scroll so that the Promotion section is centered -->
+              <li class="scroll-to-section"><a href="#promotion" class="menu-item">Products</a></li>
+              <li class="scroll-to-section"><a href="#contact-us" class="menu-item">Contact Us</a></li>
+            </ul>
+            <a class="menu-trigger"><span>Menu</span></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Welcome Area -->
+  <div class="welcome-area" id="welcome">
+    <div class="header-text">
+      <div class="container">
+        <div class="row">
+          <div class="left-text col-lg-6 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+            <h1 style="color: #0b93fb;" >Invest Smarter. Perform Better.</h1>
+            <p>Harness the power of AI and quant models to transform your trading strategy with Quantivus.</p>
+            <!-- Scrolls to the Services container -->
+            <a href="/login.html"  class="main-button-slider">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="section" id="servicesCenter">
+    <!-- The container holding the feature boxes -->
+    <div class="container">
+      <div class="row">
+        <!-- Trend Analysis -->
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+          <div class="features-item">
+            <div class="features-icon">
+              <img src="assets/images/features-icon-1.png" alt="">
+              <h4>Customized Portfolio</h4>
+              <p>Leverage advanced quantitative models and AI-driven algorithms to optimize client portfolios based on their risk tolerance, investment goals, and market conditions.</p>
+              <a href="#" class="main-button read-more-overlay-btn" data-target="#trendOverlay">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Site Optimization -->
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+          <div class="features-item">
+            <div class="features-icon">
+              <img src="assets/images/features-icon-2.png" alt="">
+              <h4>Algorithmic Trading</h4>
+              <p>Develop and implement automated trading strategies that capitalize on market inefficiencies. We offer backtesting, strategy development, and real-time execution.</p>
+              <a href="#" class="main-button read-more-overlay-btn" data-target="#siteOptimizationOverlay">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- Email Design -->
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+          <div class="features-item">
+            <div class="features-icon">
+              <img src="assets/images/features-icon-3.png" alt="">
+              <h4>Quantitative Research</h4>
+              <p>Provide in-depth quantitative analysis, predictive modeling, and market trend forecasting. Offer subscription-based insight reports, risk analysis, and scenario simulations.</p>
+              <a href="#" class="main-button read-more-overlay-btn" data-target="#emailDesignOverlay">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotion Section (Products Style) -->
+  <section class="section" id="promotion">
+    <div class="container">
+      <div class="row">
+        <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+          <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+        </div>
+        <div class="right-text offset-lg-1 col-lg-6 col-md-12 col-sm-12 mobile-bottom-fix">
+          <ul>
+            <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+              <img src="assets/images/about-icon-01.png" alt="">
+              <div class="text">
+                <h4>Software-as-a-Service</h4>
+                <p>A SaaS product that allows clients to reach financial goals.</p>
+              </div>
+            </li>
+            <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
+              <img src="assets/images/about-icon-02.png" alt="">
+              <div class="text">
+                <h4>Analytics reports</h4>
+                <p>Access to reports on portfolio performance metrics.</p>
+              </div>
+            </li>
+            <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
+              <img src="assets/images/about-icon-03.png" alt="">
+              <div class="text">
+                <h4>Stress Testing Tools</h4>
+                <p>Integration Quantivus’ portfolio optimization models.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact-us">
+    <div class="container">
+      <div class="footer-content">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="contact-form">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <fieldset>
+                      <input name="name" type="text" id="name" placeholder="Full Name" required="" style="background-color: rgba(250,250,250,0.3);">
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" id="email" placeholder="E-Mail Address" required="" style="background-color: rgba(250,250,250,0.3);">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" id="message" placeholder="Your Message" required="" style="background-color: rgba(250,250,250,0.3);"></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button">Send Message Now</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="right-content col-lg-6 col-md-12 col-sm-12">
+            <h2>More About QUANTIVUS</h2>
+            <p>Empowering your investments with data-driven insights and precision strategies. Optimize today for a smarter tomorrow.</p>
+            <ul class="social">
+              <li><a href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-rss"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="sub-footer">
+            <p>Copyright &copy; 2020 Lava Landing Page | Designed by <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Overlays for Detailed Descriptions -->
+  <!-- Trend Analysis Overlay -->
+  <div id="trendOverlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-overlay">&times;</span>
+      <h4>Trend Analysis</h4>
+      <p>
+        Our Trend Analysis service leverages real-time data and advanced analytics to identify market trends, forecast potential shifts, and provide actionable insights.
+      </p>
+      <p>
+        Explore detailed charts, interactive graphs, and comprehensive reports that break down complex data into clear, digestible information.
+      </p>
+    </div>
+  </div>
+  <!-- Site Optimization Overlay -->
+  <div id="siteOptimizationOverlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-overlay">&times;</span>
+      <h4>Site Optimization</h4>
+      <p>
+        Our Site Optimization service focuses on improving performance, usability, and search engine rankings.
+      </p>
+      <p>
+        Benefit from data-driven insights and tailored recommendations designed to boost conversion rates and overall user engagement.
+      </p>
+    </div>
+  </div>
+  <!-- Email Design Overlay -->
+  <div id="emailDesignOverlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-overlay">&times;</span>
+      <h4>Email Design</h4>
+      <p>
+        Our Email Design service crafts visually appealing and highly effective email campaigns that capture attention and drive results.
+      </p>
+      <p>
+        From promotional newsletters to transactional emails, our designs are optimized for performance across all devices.
+      </p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery-2.1.0.min.js"></script>
+  <script src="assets/js/popper.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="assets/js/imgfix.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <!-- Custom Script for Overlay Toggle and Smooth Scrolling -->
+  <script>
+    $(document).ready(function () {
+      // Overlay Toggle
+      $('.read-more-overlay-btn').click(function (e) {
+        e.preventDefault();
+        var targetOverlay = $(this).data('target');
+        $(targetOverlay).fadeIn();
+      });
+      $('.overlay').click(function (e) {
+        if (e.target === this || $(e.target).hasClass('close-overlay')) {
+          $(this).fadeOut();
+        }
+      });
+
+      // Smooth Scrolling:
+      // For Services and Products (#servicesCenter), scroll so its top is aligned below the header
+      // For Promotion (#promotion), center that container in the viewport.
+      $('a.scroll-to-section').click(function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        var headerHeight = $('.header-area').outerHeight();
+        if (target === "#servicesCenter") {
+          // Scroll so that the top of #servicesCenter is right below the header.
+          var scrollTo = $(target).offset().top - headerHeight;
+          $('html, body').animate({ scrollTop: scrollTo }, 600);
+        } else if (target === "#promotion") {
+          var $targetElem = $(target);
+          var targetOffset = $targetElem.offset().top;
+          var targetHeight = $targetElem.outerHeight();
+          var windowHeight = $(window).height();
+          // Calculate the center of the visible area (below header)
+          var visibleCenter = headerHeight + (windowHeight - headerHeight) / 2;
+          var containerCenter = targetOffset + targetHeight / 2;
+          var scrollTo = containerCenter - visibleCenter;
+          $('html, body').animate({ scrollTop: scrollTo }, 600);
+        } else {
+          $('html, body').animate({
+            scrollTop: $(target).offset().top - headerHeight
+          }, 600);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
